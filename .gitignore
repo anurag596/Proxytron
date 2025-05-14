@@ -1,0 +1,22 @@
+# Go binaries
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+proxytron
+
+# Output of go coverage tool
+*.cover
+
+# Vendor directory (if you ever use go mod vendor)
+vendor/
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db

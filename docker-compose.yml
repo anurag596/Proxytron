@@ -1,0 +1,17 @@
+services:
+  redis:
+    image: redis/redis-stack:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  proxytron:
+    build: .
+    container_name: proxytron
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_ADDR=redis:6379
+    restart: always                    #it will help app to stay continuously available.
